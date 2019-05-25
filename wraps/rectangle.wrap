@@ -1,0 +1,6 @@
+[wrap-file]
+directory = rectangle
+
+source_url = https://raw.githubusercontent.com/meisenzahl/meson-dependency-test/master/releases/rectangle.tar.gz
+source_filename = rectangle.tar.gz
+source_hash = 5b82868ac045cef6d71e1c89012b6b10f99a0b286281a432a7d948003b8b3240
