@@ -3,4 +3,4 @@ project(
     'cpp'
 )
 
-promise_dep = declare_dependency()
+shape_dep = declare_dependency()
