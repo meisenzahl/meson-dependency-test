@@ -1,0 +1,6 @@
+[wrap-file]
+directory = shape
+
+source_url = https://raw.githubusercontent.com/meisenzahl/meson-dependency-test/master/releases/shape.tar.gz
+source_filename = shape.tar.gz
+source_hash = c3ab3dffed37470f2f7a444968d68af536f6d97870a32f86f5b1f10421621c26
