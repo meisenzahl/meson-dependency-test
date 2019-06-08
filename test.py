@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import shutil
 from subprocess import Popen, PIPE, STDOUT
 import unittest
 
@@ -17,6 +18,12 @@ def updateMeson():
 def checkoutMeson():
     runCmd("git clone -b nested-subprojects git@github.com:semasquare/meson.git")
 
+def cleanSubprojectsFolder(dir):
+    if os.path.exists(dir):
+        for f in os.listdir(dir):
+            if not f.endswith(".wrap"):
+                shutil.rmtree(os.path.join(dir, f))
+
 class NestedSubprojects(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -28,12 +35,18 @@ class NestedSubprojects(unittest.TestCase):
             checkoutMeson()
 
     def testCase01(self):
+        cleanSubprojectsFolder("test/nested-subprojects/01/subprojects")
+
         self.assertTrue(False)
 
     def testCase02(self):
+        cleanSubprojectsFolder("test/nested-subprojects/02/subprojects")
+
         self.assertTrue(False)
 
     def testCase03(self):
+        cleanSubprojectsFolder("test/nested-subprojects/03/subprojects")
+
         self.assertTrue(False)
 
 if __name__ == "__main__":
